@@ -1,0 +1,229 @@
+/* ============================
+   ESTILOS GENERALES DE LA PÁGINA
+   ============================ */
+
+/* Reset básico para quitar márgenes y rellenos predeterminados */
+* {
+    margin: 0; /* Elimina margen por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    box-sizing: border-box; /* Incluye padding y borde dentro del ancho total */
+}
+
+/* Cuerpo principal */
+body {
+    font-family: Arial, sans-serif; /* Fuente legible estándar */
+    line-height: 1.6; /* Espaciado entre líneas */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
+    display: flex; /* Uso de flexbox para organizar en columnas */
+    flex-direction: column; /* Dirección en columna (header - main - footer) */
+    min-height: 100vh; /* Hace que el footer siempre quede abajo */
+}
+
+/* Contenedor general */
+.container {
+    width: 90%; /* Ocupa el 90% del ancho */
+    max-width: 1200px; /* Máximo 1200px */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* ============================
+   ENCABEZADO Y NAVEGACIÓN
+   ============================ */
+header {
+    background: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 15px 0; /* Espaciado interno */
+    border-bottom: 3px solid #444; /* Línea separadora */
+}
+
+header h1 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none; /* Quita viñetas */
+    display: flex; /* Flexbox para organizar en fila */
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espaciado entre enlaces */
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita subrayado */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Animación en hover */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Dorado al pasar el mouse */
+}
+
+/* Enlace activo */
+nav ul li a.active {
+    border-bottom: 2px solid #ffd700; /* Línea dorada debajo */
+    padding-bottom: 3px; /* Espaciado extra */
+}
+
+/* ============================
+   SECCIONES Y CONTENIDO
+   ============================ */
+main {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    margin: 20px auto; /* Margen superior e inferior */
+    padding: 20px; /* Relleno interno */
+}
+
+/* Cada sección del contenido */
+section {
+    background: #fff; /* Fondo blanco */
+    margin-bottom: 20px; /* Separación entre secciones */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #ddd; /* Borde gris claro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+/* Títulos de sección */
+section h2 {
+    margin-bottom: 10px; /* Espacio debajo */
+    color: #333; /* Gris oscuro */
+}
+
+/* Párrafos */
+section p {
+    margin-bottom: 10px; /* Espacio debajo */
+    color: #555; /* Gris intermedio */
+}
+
+/* Listas */
+section ul {
+    margin: 10px 0 10px 20px; /* Márgenes */
+}
+
+section ul li {
+    margin-bottom: 5px; /* Espacio entre ítems */
+}
+
+/* ============================
+   FORMULARIO DE CONTACTO
+   ============================ */
+main.form-container {
+    background: #fff; /* Fondo blanco */
+    margin: 20px auto; /* Centrado con separación */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra ligera */
+    max-width: 600px; /* Ancho máximo */
+    text-align: center; /* Texto centrado */
+    border: 2px solid #ddd; /* Borde gris claro */
+}
+
+main.form-container h2 {
+    margin-bottom: 15px; /* Espacio inferior */
+    color: #333; /* Texto oscuro */
+}
+
+main.form-container p {
+    margin-bottom: 20px; /* Espacio inferior */
+    font-size: 1rem; /* Tamaño estándar */
+    color: #555; /* Gris intermedio */
+}
+
+/* Campos del formulario */
+form input,
+form textarea {
+    width: 100%; /* Ocupar todo el ancho */
+    padding: 12px; /* Espaciado interno */
+    margin-bottom: 15px; /* Separación entre campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño estándar */
+    transition: border-color 0.3s; /* Animación suave */
+}
+
+/* Foco en campos */
+form input:focus,
+form textarea:focus {
+    border-color: #333; /* Borde oscuro */
+    outline: none; /* Quita borde azul */
+}
+
+/* Área de texto */
+form textarea {
+    resize: vertical; /* Solo agrandar verticalmente */
+    min-height: 120px; /* Altura mínima */
+}
+
+/* Botón */
+form button {
+    background: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 12px 20px; /* Espaciado */
+    font-size: 1rem; /* Tamaño estándar */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Manito al pasar */
+    transition: background 0.3s; /* Animación */
+}
+
+form button:hover {
+    background: #ffd700; /* Dorado */
+    color: #333; /* Texto oscuro */
+}
+
+/* ============================
+   EDITOR DE CSS EN CUADRO NEGRO
+   ============================ */
+.editor-box {
+    background: #000; /* Fondo negro */
+    color: #0f0; /* Texto verde estilo consola */
+    font-family: monospace; /* Fuente tipo consola */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #333; /* Borde gris oscuro */
+    margin-top: 20px; /* Separación con sección anterior */
+}
+
+/* Título dentro del editor */
+.editor-box h3 {
+    color: #0f0; /* Verde consola */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Bloque de CSS editable */
+.editor-box style[contenteditable="true"] {
+    display: block; /* Se muestra como bloque */
+    background: #111; /* Fondo negro grisáceo */
+    color: #0f0; /* Verde consola */
+    padding: 10px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    white-space: pre; /* Respeta saltos de línea */
+    outline: none; /* Sin borde azul */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Texto de prueba editable */
+#demoText {
+    background: #111; /* Fondo negro grisáceo */
+    color: #0f0; /* Texto verde consola */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #444; /* Borde gris */
+    font-family: monospace; /* Fuente consola */
+}
+
+/* ============================
+   PIE DE PÁGINA
+   ============================ */
+footer {
+    background: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrado */
+    padding: 15px 0; /* Espaciado */
+    margin-top: auto; /* Empuja hacia abajo */
+    font-size: 0.9rem; /* Tamaño más pequeño */
+    border-top: 3px solid #444; /* Línea separadora */
+}
